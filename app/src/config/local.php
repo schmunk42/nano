@@ -1,0 +1,19 @@
+<?php
+/**
+ * @link http://www.diemeisterei.de/
+ *
+ * @copyright Copyright (c) 2015 diemeisterei GmbH, Stuttgart
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+return [
+    'modules' => [
+        'cms' => [
+            'class' => 'app\modules\cms\Module',
+            #'layout' => '@app/views/layouts/container',
+            #'markdownUrl' => 'https://raw.githubusercontent.com/phundament/docs/master',
+        ],
+    ],
+];

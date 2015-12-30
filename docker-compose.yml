@@ -1,0 +1,31 @@
+# Phundament 4 - Application stack
+
+php:
+  build: .
+  command: sh src/run.sh
+  links:
+    - 'mariadb:DB'
+  volumes:
+    - /app
+    - ./app/.env:/app/.env
+    - ./app/composer.json:/app/composer.json
+    - ./app/composer.lock:/app/composer.lock
+    - ./app/vendor:/app/vendor
+    - ./app/src/views/site:/app/src/views/site
+    - ./app/src/views/layouts/main.php:/app/src/views/layouts/main.php
+    - ./app/src/modules/cms:/app/src/modules/cms
+nginx:
+
+nginx:
+  image: phundament/nginx-one:1.9
+  links:
+    - 'php:PHPFPM'
+  ports:
+    - '8004:80'
+  volumes_from:
+    - php
+
+mariadb:
+  image: 'tutum/mariadb:10.1'
+  environment:
+    MARIADB_PASS: secretadmin
