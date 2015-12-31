@@ -21,7 +21,7 @@ nginx:
   links:
     - 'php:PHPFPM'
   ports:
-    - '8004:80'
+    - '8005:80'
   volumes_from:
     - php
 

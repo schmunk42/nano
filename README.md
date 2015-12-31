@@ -1,3 +1,5 @@
+Phundament nano
+===============
 
 ## Installation
 
@@ -9,9 +11,19 @@ Start stack
 
     docker-compose up -d
 
-Open application in browser (OS X)    
+Check the logs, especially when you are starting a fresh stack, since the setup may take a minute
+    
+    docker-compose logs
+    
+When you see `Application initialized.` you are ready to open the application in your browser
+    
+OS X
     
     open http://192.168.99.100:8005
+    
+Ubuntu
+    
+    xdg-open http://192.168.99.100:8005
 
 ## Usage
 
