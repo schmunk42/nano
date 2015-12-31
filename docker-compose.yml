@@ -1,8 +1,11 @@
-# Phundament 4 - Application stack
+# Phundament nano
 
 php:
   build: .
   command: sh src/run.sh
+  environment:
+    - YII_ENV=dev
+    - YII_DEBUG=1
   links:
     - 'mariadb:DB'
   volumes:
