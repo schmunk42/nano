@@ -43,7 +43,7 @@ run
 
 Mount folder in `docker-compose.yml`
 
-    YII_ENV=dev yii gii/module --moduleID=cms --moduleClass=app\\modules\\cms\\Module
+    $ yii gii/module --moduleID=cms --moduleClass=app\\modules\\cms\\Module
 
 ## Develop
     
