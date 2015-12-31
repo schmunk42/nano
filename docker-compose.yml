@@ -12,7 +12,7 @@ php:
     - ./app/composer.lock:/app/composer.lock
     - ./app/vendor:/app/vendor
     - ./app/src/views/site:/app/src/views/site
-    - ./app/src/views/layouts/main.php:/app/src/views/layouts/main.php
+    - ./app/src/views/layouts:/app/src/views/layouts
     - ./app/src/modules/cms:/app/src/modules/cms
 nginx:
 
