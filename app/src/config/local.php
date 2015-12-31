@@ -10,10 +10,8 @@
 
 return [
     'modules' => [
-        'cms' => [
+        /*'cms' => [
             'class' => 'app\modules\cms\Module',
-            #'layout' => '@app/views/layouts/container',
-            #'markdownUrl' => 'https://raw.githubusercontent.com/phundament/docs/master',
-        ],
+        ],*/
     ],
 ];
