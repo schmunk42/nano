@@ -6,8 +6,8 @@ FROM phundament/app:4.0.0-rc15
 #ADD ./build/container-files/ /
 
 # Install application packages, if there are changes the composer files
-ADD ./app/composer.lock ./app/composer.json /app/
+ADD ./composer.lock ./composer.json /app/
 RUN /usr/local/bin/composer install --prefer-dist --optimize-autoloader
 
 # Add application code
-ADD app /app
+ADD src /app/src
