@@ -8,7 +8,8 @@ needs.
 
 ## Installation
 
-Setup `vendor` folder for local development and code-completion
+[Download](https://github.com/phundament/nano/releases) the latest release and start by setting up the `vendor` folder 
+for local development and code-completion
 
     docker-compose run php composer install
 
