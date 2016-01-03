@@ -1,9 +1,14 @@
-Phundament nano
-===============
+nano
+====
+
+Nano is a minimalistic application template using Phundament, Yii 2.0 Framework, PHP and Docker.
+
+Based upon the Docker `phundament/app` image it includes a ready-to-use application, which you can customize to fit your
+needs.
 
 ## Installation
 
-Setup vendor folder for local development and code-completion
+Setup `vendor` folder for local development and code-completion
 
     docker-compose run php composer install
 
@@ -27,40 +32,50 @@ Ubuntu
 
 ## Usage
 
-### Files
+To customize the application you have the following options.
 
-See `app/`...
+### Override existing files
 
-### Add package
+You can override files on the base-image as layed out in Phundament's [`src`](https://github.com/phundament/app/tree/master/src) 
+folder. 
 
-Find the packages you need and edit your `composer.json` file
+By default we're *adding* the src folder to the built image, see [`ADD`](https://docs.docker.com/engine/articles/dockerfile_best-practices/#add-or-copy) 
+for details how this works. 
 
-run
+### Add `composer` package
+
+A large part of an application usually consists of libraries. To use an library, find the package 
+you want to install and edit your `composer.json` file, afterwards run
 
     docker-compose run php composer update
 
-### Add module
+### Development `bash`
 
-Mount folder in `docker-compose.yml`
-
-    $ yii gii/module --moduleID=cms --moduleClass=app\\modules\\cms\\Module
-
-## Develop
+Start a bash in the PHP container to run `yii`, `composer` or other commands.     
     
     docker-compose run php bash
+
+### Create a `yii` module
+
+By default there is `cms` folder mounted in `docker-compose.yml`. You can create a skeleton module there by entering
+an application bash and run the following command inside the PHP container
+
+    $ yii gii/module --moduleID=cms --moduleClass=app\\modules\\cms\\Module
     
 ## Deploy
 
-Build
+Build your image
 
     docker-compose build
 
-Tag
+Tag it
 
     docker tag -f nano_php registry/vendor/image
 
-Push    
+And push it to a registry    
     
     docker push registry/vendor/image
     
+---
 
+Built by [*dmstr](http://diemeisterei.de), Stuttgart :de:
