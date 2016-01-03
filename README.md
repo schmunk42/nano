@@ -1,7 +1,8 @@
 nano
 ====
 
-Nano is a minimalistic application template using Phundament, Yii 2.0 Framework, PHP and Docker.
+Nano is a minimalistic application template using [Phundament](https://github.com/phundament/app), [Yii 2.0 Framework](http://www.yiiframework.com/doc-2.0/guide-index.html), 
+[PHP](http://php.net) and [Docker](https://www.docker.com).
 
 Based upon the Docker `phundament/app` image it includes a ready-to-use application, which you can customize to fit your
 needs.
@@ -66,6 +67,11 @@ By default there is `cms` folder mounted in `docker-compose.yml`. You can create
 an application bash and run the following command inside the PHP container
 
     $ yii gii/module --moduleID=cms --moduleClass=app\\modules\\cms\\Module
+    
+For more in information see
+
+ - [Phundament README](https://github.com/phundament/app/blob/master/README.md)
+ - [Phundament documentation](https://github.com/phundament/docs)
     
 ## Deploy
 
