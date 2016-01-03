@@ -42,6 +42,10 @@ folder.
 By default we're *adding* the src folder to the built image, see [`ADD`](https://docs.docker.com/engine/articles/dockerfile_best-practices/#add-or-copy) 
 for details how this works. 
 
+### Change configuration
+
+Add your custom configuration opions to `src/config/local.php`.
+
 ### Add `composer` package
 
 A large part of an application usually consists of libraries. To use an library, find the package 
