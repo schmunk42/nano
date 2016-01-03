@@ -7,6 +7,11 @@ Nano is a minimalistic application template using [Phundament](https://github.co
 Based upon the Docker `phundament/app` image it includes a ready-to-use application, which you can customize to fit your
 needs.
 
+## Requirements
+
+- [docker](https://docs.docker.com/engine/installation/)
+- [docker-compose](https://docs.docker.com/compose/) **>=1.5.2**
+
 ## Installation
 
 [Download](https://github.com/phundament/nano/releases) the latest release and start by setting up the `vendor` folder 
