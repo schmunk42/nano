@@ -47,7 +47,11 @@ You can override files on the base-image as layed out in Phundament's [`src`](ht
 folder. 
 
 By default we're *adding* the src folder to the built image, see [`ADD`](https://docs.docker.com/engine/articles/dockerfile_best-practices/#add-or-copy) 
-for details how this works. 
+for details how this works.
+
+Files can either be taken from the `phundament/app` repo or copied from the image 
+
+    docker cp nanousrbinde_php_1:/app/src/assets src
 
 ### Change configuration
 
