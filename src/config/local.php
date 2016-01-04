@@ -10,8 +10,8 @@
 
 return [
     'modules' => [
-        /*'cms' => [
-            'class' => 'app\modules\cms\Module',
+        /*'main' => [
+            'class' => 'app\modules\main\Module',
         ],*/
     ],
 ];
