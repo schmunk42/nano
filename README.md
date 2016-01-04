@@ -17,7 +17,7 @@ needs.
 [Download](https://github.com/phundament/nano/releases) the latest release and start by setting up the `vendor` folder 
 for local development and code-completion
 
-    docker-compose run php composer install
+    docker-compose run --rm php composer install
 
 Start stack
 
@@ -62,13 +62,13 @@ Add your custom configuration opions to `src/config/local.php`.
 A large part of an application usually consists of libraries. To use an library, find the package 
 you want to install and edit your `composer.json` file, afterwards run
 
-    docker-compose run php composer update
+    docker-compose run --rm php composer update
 
 ### Development `bash`
 
 Start a bash in the PHP container to run `yii`, `composer` or other commands.     
     
-    docker-compose run php bash
+    docker-compose run --rm php bash
 
 ### Create a `yii` module
 
