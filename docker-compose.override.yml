@@ -1,0 +1,28 @@
+# Phundament nano
+
+php:
+  build: .
+  environment:
+    - YII_ENV=dev
+    - YII_DEBUG=1
+  links:
+    - 'percona:DB'
+  volumes:
+    - ./.env:/app/.env
+    - ./composer.json:/app/composer.json
+    - ./composer.lock:/app/composer.lock
+    - ./src/config/local.php:/app/src/config/local.php
+    - ./vendor:/app/vendor
+    - ./src/views/site:/app/src/views/site
+    - ./src/views/layouts:/app/src/views/layouts
+    - ./src/modules/main:/app/src/modules/main
+
+nginx:
+  ports:
+    - '8023:80'
+
+percona:
+  environment:
+    MYSQL_ROOT_PASSWORD: secretadmin
+  ports:
+    - 33023:3306

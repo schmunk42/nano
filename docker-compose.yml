@@ -1,34 +1,25 @@
 # Phundament nano
 
 php:
-  build: .
+  image: phundament/app
   command: sh src/run.sh
   environment:
-    - YII_ENV=dev
-    - YII_DEBUG=1
+    - DB_ENV_MYSQL_ROOT_USER=root
   links:
-    - 'mariadb:DB'
+    - 'percona:DB'
   volumes:
     - /app
-    - ./.env:/app/.env
-    - ./composer.json:/app/composer.json
-    - ./composer.lock:/app/composer.lock
-    - ./src/config/local.php:/app/src/config/local.php
-    - ./vendor:/app/vendor
-    - ./src/views/site:/app/src/views/site
-    - ./src/views/layouts:/app/src/views/layouts
-    - ./src/modules/main:/app/src/modules/main
 
 nginx:
   image: phundament/nginx-one:1.9
   links:
     - 'php:PHPFPM'
   ports:
-    - '8005:80'
+    - 80
   volumes_from:
     - php
 
-mariadb:
-  image: 'tutum/mariadb:10.1'
+percona:
+  image: percona:5.6
   environment:
-    MARIADB_PASS: secretadmin
+    MYSQL_ROOT_PASSWORD: secretadmin
