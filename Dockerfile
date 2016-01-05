@@ -11,3 +11,4 @@ RUN /usr/local/bin/composer install --prefer-dist --optimize-autoloader
 
 # Add application code
 ADD src /app/src
+ADD .env-dist .env

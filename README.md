@@ -17,6 +17,7 @@ needs.
 [Download](https://github.com/phundament/nano/releases) the latest release and start by setting up the `vendor` folder 
 for local development and code-completion
 
+    cp .env-dist .env
     docker-compose run --rm php composer install
 
 Start stack
