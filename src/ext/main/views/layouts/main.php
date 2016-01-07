@@ -21,7 +21,7 @@ switch (Yii::$app->settings->get('registerPrototypeAsset', 'app.assets')) {
         AppAsset::register($this);
 }
 
-rmrevin\yii\fontawesome\AssetBundle::register($this);
+\rmrevin\yii\fontawesome\AssetBundle::register($this);
 
 ?>
 <?php $this->beginPage() ?>
