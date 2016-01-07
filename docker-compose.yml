@@ -1,7 +1,7 @@
 # Phundament nano
 
 php:
-  image: phundament/app
+  image: phundament/app:4.0.0
   command: sh src/run.sh
   environment:
     - DB_ENV_MYSQL_ROOT_USER=root
