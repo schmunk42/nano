@@ -2,20 +2,20 @@
 
 return [
     'aliases' => [
-        '@ext/main' => '@app/ext/main'
+        '@modules/frontend' => '@root/modules/frontend'
     ],
     'components' => [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views/layouts' => '@ext/main/views/layouts',
+                    '@app/views/layouts' => '@modules/frontend/views/layouts',
                 ],
             ],
         ],
     ],
     /*'modules' => [
-        'main' => [
-            'class' => 'app\modules\main\Module',
+        'frontend' => [
+            'class' => 'modules\frontend\Module',
         ],
     ],*/
 ];

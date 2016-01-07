@@ -11,4 +11,8 @@ RUN /usr/local/bin/composer install --prefer-dist --optimize-autoloader
 
 # Add application code
 ADD src /app/src
+ADD modules /app/modules
 ADD .env-dist .env
+
+RUN chmod -R 777 /app/web/assets /app/src/assets/web \
+ && chown -R www-data:www-data /app/web/assets /app/src/assets/web

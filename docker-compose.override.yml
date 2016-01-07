@@ -13,7 +13,7 @@ php:
     - ./vendor:/app/vendor
     - ./.env:/app/.env
     - ./src/config/local.php:/app/src/config/local.php
-    - ./src/ext:/app/src/ext
+    - ./modules:/app/modules
 
 nginx:
   ports:

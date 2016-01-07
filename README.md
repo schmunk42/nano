@@ -76,7 +76,7 @@ Start a bash in the PHP container to run `yii`, `composer` or other commands.
 By default there is `cms` folder mounted in `docker-compose.yml`. You can create a skeleton module there by entering
 an application bash and run the following command inside the PHP container
 
-    $ yii gii/module --moduleID=main --moduleClass=app\\modules\\main\\Module
+    $ yii gii/module --moduleID=frontend --moduleClass=modules\\frontend\\Module
     
 For more in information see
 
