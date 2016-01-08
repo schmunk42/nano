@@ -1009,16 +1009,16 @@
         },
         {
             "name": "dmstr/yii2-helpers",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dmstr/yii2-helpers.git",
-                "reference": "134d3de42bb03d652bc7ac385ba46a960937d303"
+                "reference": "1951d90ae9926b6aa64ad38a585ccdfa20a9b4f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dmstr/yii2-helpers/zipball/134d3de42bb03d652bc7ac385ba46a960937d303",
-                "reference": "134d3de42bb03d652bc7ac385ba46a960937d303",
+                "url": "https://api.github.com/repos/dmstr/yii2-helpers/zipball/1951d90ae9926b6aa64ad38a585ccdfa20a9b4f9",
+                "reference": "1951d90ae9926b6aa64ad38a585ccdfa20a9b4f9",
                 "shasum": ""
             },
             "require": {
@@ -1049,7 +1049,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2015-12-26 18:11:16"
+            "time": "2016-01-07 13:03:59"
         },
         {
             "name": "dmstr/yii2-libs-metapackage",
@@ -2821,16 +2821,16 @@
         },
         {
             "name": "schmunk42/yii2-giiant",
-            "version": "0.6.2",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmunk42/yii2-giiant.git",
-                "reference": "cc73b483ae7735ae682dba325a98103da4f3d6eb"
+                "reference": "2679e3d81b6518c33c44c5fc679b35d2c52f4572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmunk42/yii2-giiant/zipball/cc73b483ae7735ae682dba325a98103da4f3d6eb",
-                "reference": "cc73b483ae7735ae682dba325a98103da4f3d6eb",
+                "url": "https://api.github.com/repos/schmunk42/yii2-giiant/zipball/2679e3d81b6518c33c44c5fc679b35d2c52f4572",
+                "reference": "2679e3d81b6518c33c44c5fc679b35d2c52f4572",
                 "shasum": ""
             },
             "require": {
@@ -2868,7 +2868,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-12-28 21:36:46"
+            "time": "2016-01-01 15:52:42"
         },
         {
             "name": "schmunk42/yii2-markdocs-module",
