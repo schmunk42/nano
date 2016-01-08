@@ -17,10 +17,10 @@ php:
 
 nginx:
   ports:
-    - '8023:80'
+    - '8004:80'
 
 percona:
   environment:
     MYSQL_ROOT_PASSWORD: secretadmin
   ports:
-    - 33023:3306
+    - '33004:3306'
