@@ -50,9 +50,7 @@ folder.
 By default we're *adding* the src folder to the built image, see [`ADD`](https://docs.docker.com/engine/articles/dockerfile_best-practices/#add-or-copy) 
 for details how this works.
 
-Files can either be taken from the `phundament/app` repo or copied from the image 
-
-    docker cp nanousrbinde_php_1:/app/src/assets src
+Files can also be taken from the `phundament/app` repo or copied from the image. 
 
 ### Change configuration
 
@@ -61,9 +59,9 @@ Add your custom configuration opions to `src/config/local.php`.
 ### Add `composer` package
 
 A large part of an application usually consists of libraries. To use an library, find the package 
-you want to install and edit your `composer.json` file, afterwards run
+you want to install and run
 
-    docker-compose run --rm php composer update
+    docker-compose run --rm php composer require "vendor/package" "^1.0.0"
 
 ### Development `bash`
 
@@ -77,12 +75,19 @@ By default there is `cms` folder mounted in `docker-compose.yml`. You can create
 an application bash and run the following command inside the PHP container
 
     $ yii gii/module --moduleID=frontend --moduleClass=modules\\frontend\\Module
+
+### Copy files from Docker image
+
+You can copy the asset files from the image for customization in the frontend module    
+    
+    docker cp nanousrbinde_php_1:/app/src/assets modules/frontend/
+
     
 For more in information see
 
  - [Phundament README](https://github.com/phundament/app/blob/master/README.md)
  - [Phundament documentation](https://github.com/phundament/docs)
-    
+
 ## Deploy
 
 Build your image
