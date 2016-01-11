@@ -80,7 +80,7 @@ an application bash and run the following command inside the PHP container
 
 You can copy the asset files from the image for customization in the frontend module    
     
-    docker cp nanousrbinde_php_1:/app/src/assets modules/frontend/
+    docker cp $(docker-compose ps -q php):/app/src/assets modules/frontend/
 
     
 For more in information see
