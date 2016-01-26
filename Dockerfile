@@ -1,4 +1,4 @@
-FROM phundament/app:4.0.0
+FROM phundament/app:4.0.2
 
 # Prepare container
 # /!\ Note: Please add your own API token to config.json
