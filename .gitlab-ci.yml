@@ -1,0 +1,13 @@
+build:
+  stage: build
+  script:
+      - cp .env-dist .env
+      - docker-compose run --rm php composer install
+      - docker-compose up -d
+      - docker-compose stop
+
+cleanup:
+  stage: cleanup
+      - docker-compose kill
+      - docker-compose rm -fv
+  when: always
