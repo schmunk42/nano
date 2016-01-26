@@ -1,3 +1,7 @@
+stages:
+  - build
+  - cleanup
+
 build:
   stage: build
   script:
@@ -8,6 +12,7 @@ build:
 
 cleanup:
   stage: cleanup
+  script:
       - docker-compose kill
       - docker-compose rm -fv
   when: always
