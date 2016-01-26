@@ -32,11 +32,11 @@ When you see `Application initialized.` you are ready to open the application in
     
 OS X
     
-    open http://192.168.99.100:8005
+    open http://192.168.99.100:8004
     
 Ubuntu
     
-    xdg-open http://192.168.99.100:8005
+    xdg-open http://192.168.99.100:8004
 
 ## Usage
 
