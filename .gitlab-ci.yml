@@ -9,7 +9,9 @@ build:
       - cp docker-compose.override-dist.yml docker-compose.override.yml
       - docker-compose run --rm php composer install
       - docker-compose up -d
+      - docker-compose ps
       - docker-compose stop
+      - docker-compose kill rm -fv
 
 cleanup:
   stage: cleanup
